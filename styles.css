@@ -1,0 +1,814 @@
+html, body {
+  overflow: hidden;
+  background: #272343;
+
+}
+.container{
+	max-width: 1200px;
+  margin: 30px auto;
+  padding: 0;
+}
+.relative {
+	padding: 0;
+	margin: 0;
+	position: left;
+}
+#main {
+	max-width: 1200px;
+	display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 1;
+  animation: fadeIn 4s ease-in;
+}
+.card {
+	display: inline-block;
+  height: 570px;
+  width: 1000px;
+	 background: linear-gradient(90deg, #FFFFFF 31%, #bae8e8 36%);
+  overflow: hidden;
+}
+.logo {
+	top: calc(1px);
+	left: 490px;
+  font-size: 2rem;
+  line-height: 1;
+  color: #0f4c75;
+  font-family: "normal", Cinzel;
+  font-weight: 450;
+	position: fixed;
+	text-shadow: 2px 2px #ffffff;
+	width: 100%;
+}
+.Credits{
+	top: calc(70% + 25px);
+	font-size: 1.2rem;
+  color: #272343;
+  font-family: "normal", Cinzel;
+	text-shadow: 2px 2px #ffffff;
+	text-align: right;
+	position: fixed;
+}
+.list{
+	margin-left: 616px;
+	list-style-type: none;
+}
+
+.bowl {
+	width: 250px;
+	height: 250px;
+	border: 5px solid #fff;
+	border-radius: 50%;
+	position: fixed;
+	top: calc(50% - 120px);
+	left: calc(-25px);
+	background:rgba(90, 201, 226, 0.3);
+}
+
+.bowl:after {
+	content: "";
+	position: absolute;
+	top: 10px;
+	left: calc(25% - 3px);
+	width: 50%;
+	height: 40px;
+	border: 3px solid #fff;
+	border-radius: 50%;
+}
+
+.bowl:before {
+	content: "";
+	position: absolute;
+	bottom: -25px;
+	left: 50px;
+	width: 150px;
+	height: 50px;
+	border-radius: 50%;
+	background: rgba(0,0,0,0.15);
+}
+
+.bowl .water {
+	position: absolute;
+	bottom: 5%;
+	left: 0;
+	width: 100%;
+	height: 50%;
+	overflow: hidden;
+	animation: top-inner 5s ease infinite;
+}
+
+.bowl .water .inner {
+	width: 225px;
+	height: 225px;
+	border-radius: 50%;
+	background: #4e99ce;
+	position: absolute;
+	bottom: 0;
+	left: 12.5px;
+}
+
+.bowl .top-water {
+	position: absolute;
+	width: 225px;
+	height: 60px;
+	border-radius: 50%;
+	background: #82bde6;
+	bottom: 105px;
+	left: 12.5px;
+	animation: top 5s ease infinite;
+}
+
+
+
+@keyframes top {
+	from {
+		transform: rotate(0deg);
+	}
+	25% {
+		transform: rotate(3deg);
+	}
+	50% {
+		transform: rotate(-6deg);
+	}
+	75% {
+		transform: rotate(5deg);
+	}
+	to {
+		transform: rotate(0deg);
+	}
+}
+
+@keyframes top-inner {
+	from {
+		transform: rotate(0deg);
+		margin-left: 0px;
+	}
+	25% {
+		transform: rotate(3deg);
+		margin-left: -3px;
+	}
+	50% {
+		transform: rotate(-6deg);
+		margin-left: 6px;
+	}
+	75% {
+		transform: rotate(5deg);
+		margin-left: -5px;
+	}
+	to {
+		transform: rotate(0deg);
+		margin-left: 0px;
+	}
+}
+
+.fish {
+	margin-left: 8px;
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	animation: jump 3s infinite;
+}
+
+@keyframes jump {
+	0% {
+		left: 80px;
+		top: 120px;
+		transform: rotate(90deg);
+	}
+	16.7% {
+		left: 70px;
+		top: 60px;
+		transform: rotate(-20deg);
+	}
+	33.4% {
+		left: 60px;
+		top: 120px;
+		transform: rotate(-90deg);
+	}
+	50% {
+		left: 80px;
+		top: 120px;
+		transform: rotate(90deg);
+	}
+	100% {
+		left: 80px;
+		top: 120px;
+		transform: rotate(90deg);
+	}
+}
+
+.fish-water {
+	width: 50px;
+	height: 20px;
+	background: #82bde6;
+	position: absolute;
+	top: 118px;
+	border-bottom-left-radius: 15px;
+	left: 60px;
+}
+
+.center-box {
+	height: 400px;
+	width: 400px;
+	position: fixed;
+	top: calc(50% - 250px);
+	left: calc(-65px);
+	animation: 5s float infinite ease;
+	transform: scale(0.5);
+}
+
+@keyframes float {
+	from {
+		transform:translate(0, 0px) scale(0.25);
+	}
+	25% {
+		transform:translate(0, 4px) scale(0.25);
+	}
+	50% {
+		transform:translate(0, -7px) scale(0.25);
+	}
+	75% {
+		transform:translate(0, 7px) scale(0.25);
+	}
+	to {
+		transform: translate(0, -0px) scale(0.25);
+	}    
+}
+
+.boat {
+	position: relative;
+	width: 400px;
+	height: 100px;
+	margin-top: -15px;
+}
+
+.boat .boat-body {
+	width: 380px;
+	height: 90px;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	background: #cdab33;
+	border-bottom-left-radius: 90px;
+	border-bottom-right-radius: 20px;
+	-webkit-clip-path: polygon(0 0, 100% 0, 99% 100%, 0% 100%);
+}
+
+.boat .boat-body:before {
+	content: "";
+	width: 380px;
+	height: 70px;
+	position: absolute;
+	bottom: 20px;
+	right: 0px;
+	background: #d2bd39;
+	border-bottom-left-radius: 60px;
+}
+
+.boat .boat-body:after {
+	content: "";
+	width: 380px;
+	height: 40px;
+	position: absolute;
+	bottom: 50px;
+	right: 0px;
+	background: #e8da43;
+	border-bottom-left-radius: 60px;
+}
+
+.boat .top {
+	width: 390px;
+	height: 5px;
+	background: #e8da43;
+	position: absolute;
+	top: 0;
+	right: 0;
+	border-bottom: solid 5px #cdab33;
+}
+
+.boat .motor {
+	position: relative;
+	width: 80px;
+	height: 80px;
+	border-radius: 20px;
+	background: #ef4723;
+	top: -50px;
+	right: -370px;
+}
+
+.boat .motor:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 80px;
+	height: 20px;
+	border-top-left-radius: 18px;
+	border-top-right-radius: 18px;
+	background: #fff;
+}
+
+.boat .motor:before {
+	content: "";
+	position: absolute;
+	-webkit-clip-path: polygon(0 0, 100% 0, 60% 100%, 0% 100%);
+	width: 20px;
+	height: 100px;
+	background: #bf3526;
+	top: 55px;
+	right: 20px;
+	z-index: -1;
+}
+
+.boat .motor .parts, .boat .motor .parts:before, .boat .motor .parts:after {
+	width: 25px;
+	height: 5px;
+	right: 10px;
+	top: 30px;
+	background: #bf3526;
+	border-radius: 20px;
+	position: absolute;
+}
+
+.boat .motor .parts:before, .boat .motor .parts:after {
+	content: "";
+	right: 0px;
+}
+
+.boat .motor .parts:before {
+	top: 10px;
+}
+
+.boat .motor .parts:after {
+	top: 20px;
+}
+
+.boat .motor .button {
+	position: absolute;
+	left: -10px;
+	top: 25px;
+	background: #bf3526;
+	height: 10px;
+	width: 20px;
+	border-radius: 20px;
+}
+
+.fisherman {
+	position:relative;
+	width: 400px;
+	height: 300px;
+}
+
+.fisherman .left-leg {
+	width: 20px;
+	height: 100px;
+	background: #de4125;
+	border-radius: 20px;
+	position: absolute;
+	bottom: -14px;
+	right: 120px;
+	transform: rotate(-50deg);
+}
+
+.fisherman .left-leg:before {
+	content: "";
+	width: 20px;
+	height: 100px;
+	background: #de4125;
+	border-radius: 20px;
+	position: absolute;
+	bottom: 20px;
+	left: -37px;
+	transform: rotate(60deg);
+}
+
+.fisherman .left-leg:after {
+	content: "";
+	position: absolute;
+	bottom: 2px;
+	left: -70px;
+	width: 30px;
+	height: 100px;
+	background: #338ca0;
+	transform: rotate(60deg);
+}
+
+.fisherman .butt {
+	width: 50px;
+	height: 20px;
+	background: #bf3526;
+	position: absolute;
+	border-radius: 20px;
+	bottom: 0px;
+	right: 90px;
+}
+
+.fisherman .right-leg {
+	width: 20px;
+	height: 110px;
+	background: #bf3526;
+	border-radius: 20px;
+	position: absolute;
+	bottom: -22px;
+	right: 159px;
+	transform: rotate(-60deg);
+}
+
+.fisherman .right-leg:before {
+	content: "";
+	width: 20px;
+	height: 100px;
+	background: #bf3526;
+	border-radius: 20px;
+	position: absolute;
+	bottom: 45px;
+	left: -40px;
+	transform: rotate(80deg);
+}
+
+.fisherman .right-leg:after {
+	content: "";
+	position: absolute;
+	bottom: 38px;
+	left: -75px;
+	width: 30px;
+	height: 100px;
+	background: #338ca0;
+	transform: rotate(80deg);
+}
+
+.fisherman .body {
+	width: 80px;
+	height: 150px;
+	background: #d2bd24;
+	position: absolute;
+	bottom: 15px;
+	right: 40px;
+	-webkit-clip-path: ellipse(40% 50% at 0% 50%);
+	transform: rotate(-20deg);
+}
+
+.fisherman .body:before {
+	content: "";
+	width: 80px;
+	height: 200px;
+	background: #d2bd24;
+	position: absolute;
+	bottom: -10px;
+	right: 15px;
+	-webkit-clip-path: ellipse(90% 50% at 0% 50%);
+	transform: rotate(10deg);
+}
+
+.fisherman .left-arm {
+	width: 20px;
+	height: 90px;
+	background: #e8d93d;
+	border-radius: 20px;
+	position: absolute;
+	bottom: 55px;
+	right: 135px;
+	transform: rotate(30deg);
+}
+
+.fisherman .left-arm:after {
+	content: "";
+	width: 20px;
+	height: 60px;
+	background: #e8d93d;
+	border-radius: 20px;
+	position: absolute;
+	bottom: -15px;
+	right: 20px;
+	transform: rotate(-70deg);
+	border-top-left-radius: 0px;
+	border-top-right-radius: 0px;
+}
+
+.fisherman .left-arm:before {
+	content: "";
+	background: #ffd1b5;
+	width: 25px;
+	height: 25px;
+	position: absolute;
+	top: 50px;
+	right: 53px;
+	border-radius: 20px;
+}
+
+.fisherman .right-arm {
+	width: 20px;
+	height: 110px;
+	background: #d2bd24;
+	border-radius: 20px;
+	position: absolute;
+	bottom: 46px;
+	right: 163px;
+	transform: rotate(40deg);
+}
+
+.fisherman .right-arm:after {
+	content: "";
+	width: 20px;
+	height: 50px;
+	background: #d2bd24;
+	border-radius: 20px;
+	position: absolute;
+	bottom: -15px;
+	right: 20px;
+	transform: rotate(-80deg);
+	border-top-left-radius: 0px;
+	border-top-right-radius: 0px;
+}
+
+.fisherman .right-arm:before {
+	content: "";
+	background: #ffd1b5;
+	width: 25px;
+	height: 25px;
+	position: absolute;
+	top: 82px;
+	right: 50px;
+	border-radius: 20px;
+}
+
+.waves {
+	poistion: absolute;
+	bottom: 0;
+	left: 0;
+	overflow: hidden;
+	width: calc(100% + 50px);
+}
+
+.waves img {
+	position:relative;
+	height: 25px;
+	animation: 4s waves infinite linear;
+}
+
+@keyframes waves {
+	from {
+		margin-left: 0px;
+	}
+	to {
+		margin-left: -350px;
+	}
+}
+
+.bg {
+	background: #63432e;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 50%;
+	width: 100%;
+	z-index: -1;
+}
+
+.bg:before {
+	content: "";
+	background: #76ced8;
+	position: absolute;
+	bottom: -40px;
+	height: 40px;
+	width: 100%;
+	left: 0;
+}
+
+/*
+.bg:after {
+	content: "";
+	position: absolute;
+	background: #d4ee8d;
+	width: 100%;
+	height: calc(100% - 60px);
+	left: 0;
+	top: 0;
+}
+*/
+
+.bg .bushes {
+	width: 100%;
+	height: 40px;
+	position: absolute;
+	left: 0;
+	bottom: 20px;
+	background: url("http://vysocina.xyz/spacer.png") repeat-x;
+	background-size: 45px;
+}
+
+.fisherman .head {
+	position: absolute;
+	bottom: 135px;
+	right: 110px;
+	width: 60px;
+	height: 80px;
+	border-radius: 50%;
+	transform: rotate(10deg);
+}
+
+.head .nose {
+	width: 0; 
+  height: 0; 
+  border-top: 20px solid transparent;
+  border-bottom: 8px solid transparent; 
+  
+  border-right: 15px solid #fab58e;
+	position: absolute;
+	top: 25px;
+	left: 6px;
+	transform: rotate(-10deg);
+}
+
+.head .eyes {
+	width: 5px;
+	height: 8px;
+	border-radius: 50%;
+	background: #1a1a1a;
+	position: absolute;
+	top: 25px;
+	left: 6px;
+	transform: rotate(-10deg);
+}
+
+.head .eyes:before {
+	content: "";
+	width: 5px;
+	height: 8px;
+	border-radius: 50%;
+	background: #1a1a1a;
+	position: absolute;
+	top: 0px;
+	left: 20px;
+}
+
+.head .eyebrows {
+	width: 15px;
+	height: 7px;
+	background: #e67e5b;
+	position: absolute;
+	top: 15px;
+	left: -3px;
+	transform: rotate(-10deg);
+}
+
+.head .eyebrows:before {
+	content: "";
+	width: 20px;
+	height: 7px;
+	background: #e67e5b;
+	position: absolute;
+	top: 0px;
+	left: 22px;
+}
+
+.head .face {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	background: #d76540;
+	overflow: hidden;
+}
+
+.head .face:before {
+	content: "";
+	position: absolute;
+	top: -20px;
+	left: -10px;
+	background: #ffd1b5;
+	border-radius: 50%;
+	width: 60px;
+	height: 85px;
+	transform: rotate(-10deg);
+}
+
+.head .beard {
+	width: 40px;
+	height: 25px;
+	background: #e67e5b;
+	position: absolute;
+	top: 38px;
+	left: 1px;
+	transform: rotate(-10deg);
+	-webkit-clip-path: ellipse(50% 50% at 50% 100%);
+}
+
+.head .hat {
+	width: 80px;
+	height: 8px;
+	background: #3d402b;
+	position: absolute;
+	top: 8px;
+	left: -13px;
+}
+
+.head .hat:before {
+	content: "";
+	position: absolute;
+	left: 10px;
+	bottom: 8px;
+	width: 60px;
+	height: 40px;
+	background: #7b8445;
+	-webkit-clip-path: ellipse(50% 50% at 50% 100%);
+}
+
+.rod {
+	position: absolute;
+	bottom: 130px;
+	left: -140px;
+	width: 380px;
+	height: 5px;
+	background: #331604;
+	transform: rotate(10deg);
+}
+
+.rod .handle {
+	position:relative;
+	width: 20px;
+	height: 20px;
+	border-radius: 20px;
+	background: #efdddb;
+	left: 310px;
+	top: 3px;
+}
+
+.rod .handle:before {
+	content: "";
+	position: absolute;
+	left: 10px;
+	top: 7px;
+	width: 13px;
+	height: 4px;
+	background: #1a1a1a;
+}
+
+.rod .rope {
+	position:relative;
+	width: 3px;
+	height: 250px;
+	background: #fff;
+	top: -18px;
+	left: 22px;
+	transform: rotate(-10deg);
+	animation: 5s rope infinite;
+}
+
+@keyframes rope {
+	from {
+		height: 250px;
+	}
+	25% {
+		height: 220px;
+	}
+	50% {
+		height: 280px;
+	}
+	75% {
+		height: 220px;
+	}
+	to {
+		height: 250px;
+	}
+}
+
+.all {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transform: scale(.75);
+}
+
+.leaves1 {
+  position: absolute;
+  height: 700px;
+  width: 200px;
+  background-image: url(https://www.myolab.com.au/wp-content/uploads/2016/09/services-leaves1.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+.leaves2 {
+  position: absolute;
+  height: 230px;
+  width: 500px;
+  top: 340px;
+  background-image: url(https://www.myolab.com.au/wp-content/uploads/2016/09/services-leaves5.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+.button {
+  position: absolute;
+  top: 400px;
+	left: 750px;
+	background-color: #d2e603;
+  color: black;
+  border: 2px solid #4CAF50;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
